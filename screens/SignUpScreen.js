@@ -17,12 +17,6 @@ const SignUpScreen = () => {
 
   return (
     <SafeAreaView className="bg-white h-full relative">
-      <View className="absolute top-0 left-0">
-        <Image source={require("../assets/sign-up/gradient-mid-left.png")} />
-      </View>
-      <View className="absolute bottom-0 right-0">
-        <Image source={require("../assets/sign-up/gradient-below-right.png")} />
-      </View>
       <Logo />
       <View className="px-8 gap-6">
         <Text className="text-center font-bold text-3xl">Sign Up</Text>
@@ -49,7 +43,7 @@ const SignUpScreen = () => {
           keyboardType="visible-password"
           className="border border-lightGray h-12 px-4 rounded-md"
         />
-        <View className="bg-primaryc">
+        <View>
           <CustomButton title={"Sign up"} to={"SignIn"} classes={"mt-4"} />
         </View>
         <View className="flex-row justify-center">

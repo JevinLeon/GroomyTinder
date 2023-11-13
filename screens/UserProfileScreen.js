@@ -65,7 +65,7 @@ const UserProfileScreen = () => {
         </View>
 
         <View>
-          <CustomButton title="Logout" to="GetStarted" />
+          <CustomButton title="Logout" to="SignIn" />
         </View>
       </View>
     </SafeAreaView>
