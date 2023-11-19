@@ -17,6 +17,14 @@ import MainGetStartedScreen from "./screens/MainGetStartedScreen";
 import TinderScreen from "./screens/TinderScreen";
 import HomeScreen from "./screens/HomeScreen";
 import NotificationsScreen from "./screens/NotificationsScreen";
+import ServicesScreen from "./screens/ServicesScreen";
+import ProductsScreen from "./screens/ProductsScreen";
+import OrderHistory from "./screens/OrderHistory";
+import OngoingOrder from "./screens/OngoingOrder";
+import StoreScreen from "./screens/StoreScreen";
+import BasketScreen from "./screens/BasketScreen";
+import PreparingOrderScreen from "./screens/PreparingOrderScreen";
+import DeliveryScreen from "./screens/DeliveryScreen";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -112,9 +120,49 @@ export const StackNavigator = () => {
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
       <Stack.Screen
-        name="TinderScreen"
+        name="HomeScreen"
         component={TabNavigator}
         options={{ headerShown: false, animation: "simple_push" }}
+      />
+      <Stack.Screen
+        name="Services"
+        component={ServicesScreen}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      <Stack.Screen
+        name="Products"
+        component={ProductsScreen}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      <Stack.Screen
+        name="Ongoing"
+        component={OngoingOrder}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      <Stack.Screen
+        name="History"
+        component={OrderHistory}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      <Stack.Screen
+        name="Store"
+        component={StoreScreen}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      <Stack.Screen
+        name="Basket"
+        component={BasketScreen}
+        options={{ presentation: "modal", headerShown: false }}
+      />
+      <Stack.Screen
+        name="PreparingOrder"
+        component={PreparingOrderScreen}
+        options={{ presentation: "fullScreenModal", headerShown: false }}
+      />
+      <Stack.Screen
+        name="Delivery"
+        component={DeliveryScreen}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

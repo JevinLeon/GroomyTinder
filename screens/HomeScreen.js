@@ -10,26 +10,33 @@ import React from "react";
 import { MagnifyingGlassIcon } from "react-native-heroicons/solid";
 import FeaturedPromo from "../components/FeaturedPromo";
 import FeaturedRow from "../components/FeaturedRow";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
   const links = [
     {
       img: <Image source={require("../assets/home/services-icon.png")} />,
       title: "Services",
+      to: "Services",
     },
     {
       img: <Image source={require("../assets/home/products-icon.png")} />,
       title: "Products",
+      to: "Products",
     },
     {
       img: <Image source={require("../assets/home/ongoing-icon.png")} />,
       title: "Ongoing",
+      to: "Ongoing",
     },
     {
       img: <Image source={require("../assets/home/history-icon.png")} />,
       title: "History",
+      to: "History",
     },
   ];
+
+  const navigation = useNavigation();
 
   return (
     <View className="bg-white h-full">
@@ -59,7 +66,11 @@ const HomeScreen = () => {
         </View>
         <View className="flex-row gap-8 pt-8 pb-4 px-8 justify-center">
           {links.map((item) => (
-            <TouchableOpacity className="items-center" key={item.title}>
+            <TouchableOpacity
+              className="items-center"
+              key={item.title}
+              onPress={() => navigation.navigate(item.to)}
+            >
               {item.img}
               <Text>{item.title}</Text>
             </TouchableOpacity>

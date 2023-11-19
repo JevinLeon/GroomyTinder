@@ -33,11 +33,7 @@ const SignInScreen = () => {
           className="border border-lightGray h-12 px-4 rounded-md"
         />
         <View>
-          <CustomButton
-            title={"Sign in"}
-            to={"TinderScreen"}
-            classes={"mt-4"}
-          />
+          <CustomButton title={"Sign in"} to={"HomeScreen"} classes={"mt-4"} />
         </View>
         <View className="flex-row justify-center">
           <Text className="text-md text-secondary">
