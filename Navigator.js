@@ -25,6 +25,11 @@ import StoreScreen from "./screens/StoreScreen";
 import BasketScreen from "./screens/BasketScreen";
 import PreparingOrderScreen from "./screens/PreparingOrderScreen";
 import DeliveryScreen from "./screens/DeliveryScreen";
+import MessagesScreen from "./screens/MessagesScreen";
+import EditUserProfileScreen from "./screens/EditUserProfileScreen";
+import TinderDetailScreen from "./screens/TinderDetailScreen";
+import ChatScreen from "./screens/ChatScreen";
+import SplashScreen from "./screens/SplashScreen";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -90,6 +95,11 @@ export const StackNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        name="Splash"
+        component={SplashScreen}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      <Stack.Screen
         name="FirstGetStarted"
         component={FirstGetStartedScreen}
         options={{ headerShown: false, animation: "slide_from_right" }}
@@ -122,6 +132,26 @@ export const StackNavigator = () => {
       <Stack.Screen
         name="HomeScreen"
         component={TabNavigator}
+        options={{ headerShown: false, animation: "simple_push" }}
+      />
+      <Stack.Screen
+        name="TinderDetail"
+        component={TinderDetailScreen}
+        options={{ headerShown: false, animation: "simple_push" }}
+      />
+      <Stack.Screen
+        name="Messages"
+        component={MessagesScreen}
+        options={{ headerShown: false, animation: "simple_push" }}
+      />
+      <Stack.Screen
+        name="Chat"
+        component={ChatScreen}
+        options={{ headerShown: false, animation: "simple_push" }}
+      />
+      <Stack.Screen
+        name="EditUserProfile"
+        component={EditUserProfileScreen}
         options={{ headerShown: false, animation: "simple_push" }}
       />
       <Stack.Screen

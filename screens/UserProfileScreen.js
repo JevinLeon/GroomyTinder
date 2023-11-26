@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { PencilIcon } from "react-native-heroicons/solid";
 import ImageCard from "../components/ImageCard";
 import CustomButton from "../components/CustomButton";
+import { TouchableOpacity } from "react-native";
 
 const UserProfileScreen = () => {
   const navigation = useNavigation();
@@ -14,7 +15,11 @@ const UserProfileScreen = () => {
       <View className="px-8 py-2 gap-6">
         <View className="flex-row justify-between">
           <Text className="text-secondary font-bold text-2xl">My Profile</Text>
-          <PencilIcon size={24} color="#FF7D1B" />
+          <TouchableOpacity
+            onPress={() => navigation.navigate("EditUserProfile")}
+          >
+            <PencilIcon size={24} color="#FF7D1B" />
+          </TouchableOpacity>
         </View>
 
         <View className="flex-row items-center">
