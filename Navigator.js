@@ -30,6 +30,7 @@ import EditUserProfileScreen from "./screens/EditUserProfileScreen";
 import TinderDetailScreen from "./screens/TinderDetailScreen";
 import ChatScreen from "./screens/ChatScreen";
 import SplashScreen from "./screens/SplashScreen";
+import OrderDetail from "./screens/OrderDetail";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -172,6 +173,11 @@ export const StackNavigator = () => {
       <Stack.Screen
         name="History"
         component={OrderHistory}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      <Stack.Screen
+        name="OrderDetail"
+        component={OrderDetail}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
       <Stack.Screen

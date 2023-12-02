@@ -1,10 +1,16 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { CheckCircleIcon, ClockIcon } from "react-native-heroicons/solid";
+import { useNavigation } from "@react-navigation/native";
 
 const OrderCard = ({ isCompleted = false, text, items }) => {
+  const navigation = useNavigation();
+
   return (
-    <View className="w-full bg-white border-b border-lightGray pb-4 mb-4">
+    <TouchableOpacity
+      onPress={() => navigation.navigate("OrderDetail")}
+      className="w-full bg-white border-b border-lightGray pb-4 mb-4"
+    >
       <Text className="text-md mb-4">Today, 12:13</Text>
       <View className="flex-row items-center h-32 gap-2 py-2">
         <View className="h-full flex-col flex-1 justify-between">
@@ -30,7 +36,7 @@ const OrderCard = ({ isCompleted = false, text, items }) => {
           )}
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
